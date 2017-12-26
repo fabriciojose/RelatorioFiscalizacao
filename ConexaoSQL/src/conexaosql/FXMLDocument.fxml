@@ -6,9 +6,11 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="conexaosql.FXMLDocumentController">
+<AnchorPane id="AnchorPane" prefHeight="344.0" prefWidth="396.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testeconexao.FXMLDocumentController">
     <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
+      <TextField fx:id="txtEmail" layoutX="89.0" layoutY="82.0" prefHeight="25.0" prefWidth="219.0" promptText="Digite seu email" />
+      <TextField fx:id="txtSenha" layoutX="121.0" layoutY="137.0" promptText="Digite sua senha" />
+      <Button fx:id="btnEntrar" layoutX="120.0" layoutY="197.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Entrar" />
+      <Button fx:id="btnSair" layoutX="120.0" layoutY="239.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Sair" />
     </children>
 </AnchorPane>
