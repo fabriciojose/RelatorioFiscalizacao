@@ -8,27 +8,36 @@ import java.sql.SQLException;
 public class Conexao {
     
     public static Connection ConexaoBanco (){
+        // criar o objecto conexão
         java.sql.Connection conexaoSQL = null;
         
         //chamar driver
         String driver = "com.mysql.jdbc.Driver";
         
-        // informações referente ao BD
+        // informações referente ao banco de dados
         String url = "jdbc:mysql://br234.hostgator.com.br:3306/somde078_EstudosMySQL";
         String user = "somde078_conn";
         String password  = "1.juetania";
         
+        //Tratar as exceções
         try {
             Class.forName(driver);
             conexaoSQL = DriverManager.getConnection(url, user, password);
             return conexaoSQL;
         } catch (ClassNotFoundException | SQLException e) {
+            System.out.println(e);
             return null;
         }
                  
     }
     public static void main(String[] args) {
             Connection strConexao = Conexao.ConexaoBanco();
+            if (strConexao == null){
+                System.out.println("Não conectado!");
+                
+            }else{
+                System.out.println(strConexao + " CONECTADO COM SUCESSO!");
+            }
             
     }
 
